@@ -1,0 +1,11 @@
+mkdir superhond-new && cd superhond-new
+git init
+echo "# Superhond (nieuwe start)" > README.md
+mkdir css js
+printf "<!DOCTYPE html>\n<html lang=\"nl\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n  <title>Superhond</title>\n  <link rel=\"stylesheet\" href=\"./css/style.css\" />\n</head>\n<body>\n  <div id=\"app\" data-layout=\"superhond\">\n    <h1>Superhond Nieuwe Start</h1>\n    <script type=\"module\" src=\"./js/main.js\"></script>\n  </div>\n</body>\n</html>\n" > index.html
+touch css/style.css js/main.js
+git add .
+git commit -m "feat: nieuwe basisstructuur"
+git branch -M main
+git remote add origin git@github.com:<jouw-username>/superhond-new.git
+git push -u origin main
